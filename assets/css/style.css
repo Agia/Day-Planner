@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&family=DM+Mono:wght@300;500&family=Josefin+Sans:wght@100;200;400;500;700&family=Readex+Pro:wght@200;300;400;700&display=swap');
+
+:root {
+  --light: rgb(228, 228, 228);
+  --dark: rgb(77, 77, 77);
+  --highlight: #598bf7;
+  --header: "Josefin Sans";
+  --body: "Readex Pro";
+  --mono: "DM Mono";
+  --other: "Coda";
+}
+
 body {
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: var(--body);
   font-size: 16px;
   line-height: 1;
 }
@@ -15,8 +28,10 @@ textarea {
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
-  color: black;
+  /* background-color: transparent; */
+  /* color: black; */
+  background-color: var(--dark);
+  color: var(--light);
   border-radius: 0;
   border-bottom: 10px solid black;
 }
@@ -58,14 +73,34 @@ textarea {
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  border: 0;
+  /* border-left: 1px solid black;
   border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  border-bottom-right-radius: 15px; */
+  /* background-color: #06aed5; */
+  background-color: var(--highlight);
   color: white;
+  /* color: var(--light); */
+  width: 13%;
 }
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+/* ! Experiementation below */
+
+h1 {
+  font-family: var(--header);
+  text-transform: uppercase;
+  padding: 10px 0px 0px 0px;
+  background-color: var(--highlight);
+  margin-bottom: 20px;
+}
+#currentDay {
+  color: var(--highlight);
+  /* font-weight: 700; */
+  padding: 10px;
+  font-family: var(--other);
 }
