@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&family=DM+Mono:wght@300;500&family=Josefin+Sans:wght@100;200;400;500;700&family=Readex+Pro:wght@200;300;400;700&display=swap');
 
 :root {
-  --light: rgb(228, 228, 228);
+  --light: #fafafa;
   --dark: rgb(77, 77, 77);
   --highlight: #598bf7;
   --header: "Josefin Sans";
-  --body: "Readex Pro";
+  --other: "Readex Pro";
   --mono: "DM Mono";
-  --other: "Coda";
+  --body: "Coda";
 }
 
 body {
@@ -15,6 +15,7 @@ body {
   font-family: var(--body);
   font-size: 16px;
   line-height: 1;
+  background-color: var(--dark);
 }
 
 textarea {
@@ -72,22 +73,22 @@ textarea {
   color: white;
 }
 
-.saveBtn {
-  border: 0;
+/* .saveBtn { */
+  /* border: 0; */
   /* border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px; */
   /* background-color: #06aed5; */
-  background-color: var(--highlight);
-  color: white;
+  /* background-color: var(--highlight); */
+  /* color: white; */
   /* color: var(--light); */
-  width: 13%;
-}
+  /* width: 13%; */
+/* } */
 
-.saveBtn i:hover {
+/* .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
-}
+} */
 
 /* ! Experiementation below */
 
@@ -96,11 +97,54 @@ h1 {
   text-transform: uppercase;
   padding: 10px 0px 0px 0px;
   background-color: var(--highlight);
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
+
+
+
 #currentDay {
   color: var(--highlight);
-  /* font-weight: 700; */
+  font-weight: 500;
   padding: 10px;
+}
+
+
+.button-save, .button-del {
+  border: 0;
+  color: var(--light);
+  width: 13%;
+  text-transform: uppercase;
+  border-bottom: var(--dark) solid 1px;
+  border-right: var(--dark) solid 1px;
+}
+
+
+.button-save {
+  background-color: var(--highlight);
+  /* border-right: var(--dark) solid 2px; */
+  border-left: var(--dark) solid 1px;
+}
+.button-del {
+  background-color: #ff6961;
+  border-right: var(--dark) solid 1px;
+}
+
+.input-group-text {
+  border-radius: 0;
+  border: 0;
+  border-bottom: var(--dark) solid 1px;
+  border-left: var(--dark) solid 1px;
+  
+}
+.time-text {
+  width: 12%;
   font-family: var(--other);
+  background-color: var(--dark);
+  color: #fafafa;
+  margin: 0;
+}
+
+.event-input {
+  padding: 20px 0 0 20px;
+  font-family: var(--mono);
 }
