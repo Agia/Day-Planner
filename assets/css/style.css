@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200;300;400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700&display=swap');
+
+/* TODO: DELETE OSWALD IF NOT USED */
 
 @font-face {
     font-family: "Aqua Grotesque";
@@ -11,13 +13,12 @@
   --dark: #231F20;
   --hl-dark: #574D68;
   --highlight: #2F52E0;
-  --hl-red: #DD2D4A;
+  --hl-red: #ce586c;
   --hl-yellow: #e3fa73;
   --hl-blue: #598bf7;
-  --hl-green: #61f39b; /* ALT #258EA6 */
-  --serif: "PT Serif", "Old Standard TT";
+  --hl-green: #61f39b;
+  --hl-teal: #258EA6;
   --title: "Aqua Grotesque";
-  /* --body: "Oswald"; */
   --mono: "Roboto Mono";
 }
 
@@ -79,6 +80,10 @@ h1 {
   /* border: var(--dark) solid 3px; */
 }
 
+#agenda-list {
+  padding: 20px 15px 50px;
+}
+
 .button-save {
   color: var(--light);
   width: 10%;
@@ -86,16 +91,6 @@ h1 {
   border: var(--dark) solid 3px;
   background-color: var(--hl-blue);
 }
-
-/* .button-del {
-    color: var(--light);
-    width: 10%;
-    text-transform: uppercase;
-    border: var(--dark) solid 3px;
-    background-color: var(--hl-red);
-    width: 3rem;
-    margin: 1px 0;
-} */
 
 .hour-row {
     margin: 7px 0px;
@@ -114,12 +109,17 @@ h1 {
   text-align: center;
 }
 
-textarea {
+/* textarea {
     resize: none;
+} */
+
+input {
+  height: 180px;
 }
 
 .event-input {
-  padding: 20px 0 0 20px;
+  padding-left: 20px;
+  height: 75px;
   font-family: var(--mono);
   border: var(--dark) solid 3px;
   margin: 0px 3px 0 0;
