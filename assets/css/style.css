@@ -12,12 +12,12 @@
   --mid: #CEBEBE;
   --dark: #231F20;
   --hl-dark: #574D68;
-  --highlight: #2F52E0;
-  --hl-red: #ce586c;
-  --hl-yellow: #e3fa73;
+  /* --highlight: #2F52E0; */
+  --hl-red: #f37a8e;
+  /* --hl-yellow: #e3fa73; */
   --hl-blue: #598bf7;
   --hl-green: #61f39b;
-  --hl-teal: #258EA6;
+  /* --hl-teal: #258EA6; */
   --title: "Aqua Grotesque";
   --mono: "Roboto Mono";
 }
@@ -48,7 +48,7 @@ body {
 }
 
 .present {
-  background-color: var(--hl-yellow);
+  background-color: var(--mid);
   color: var(--dark);
 }
 
@@ -84,6 +84,23 @@ h1 {
   padding: 20px 15px 50px;
 }
 
+#legend > p {
+  min-width: 80vw;
+  text-align: center;
+  font-size: 1rem;
+}
+
+#badges {
+  text-align: center;
+}
+
+.badge {
+  padding: 20px 10px;
+  margin: 15px auto;
+  width: 7rem;
+  font-size: 1.1rem;
+}
+
 .button-save {
   color: var(--light);
   width: 10%;
@@ -98,20 +115,16 @@ h1 {
 
 .time-text {
   width: 5rem;
-  color: var(--dark);
+  color: var(--light);
   font-family: var(--mono);
   font-weight: 700;
-  background-color: var(--mid);
+  background-color: var(--hl-dark);
   border: var(--dark) solid 3px;
   border-right: var(--dark) solid 0.5px;
   border-radius: 0;
   margin: 0;
   text-align: center;
 }
-
-/* textarea {
-    resize: none;
-} */
 
 input {
   height: 180px;
