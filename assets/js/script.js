@@ -1,22 +1,24 @@
 // Get the current day / date and render it to the target element
+// Variable to store current day / date for hero element
 let currentDate = moment().format("dddd, MMMM Do YYYY");
+// Application of above to relevant HTML element
 $("#currentDay").text(currentDate);
+// Variable to keep track of current hour
 
+// TODO: Change currentHour to string
 let currentHour = moment().hour();
+// Global variable for use across functions / listeners
 let input;
 let time;
-let events = [];
-let savedEvents = [];
 
 // * EVENT LISTENERS * //
 $(".button-save").on("click", function () {
     input = $(this).siblings(".event-input").val();
     time = $(this).siblings(".event-input").attr("data-time");
-    // localStorage.setItem(time, input);
     storeInput();
 })
 
-
+// TODO: Add a remove function - if time
 
 
 $(".event-input").each(function () {
@@ -28,7 +30,22 @@ $(".event-input").each(function () {
         $(this).val(event);
     }
 
+    // TODO: Add other removeClass
+
+    if (currentHour == timeIndex) {
+        $(this).addClass("present");
+        $(this).removeClass("past future");
+    } else if (currentHour > timeIndex) {
+        $(this).addClass("past");
+    } else {
+        $(this).addClass("future");
+    }
 })
+
+// function hourComparison () {
+//     if (currentHour === $(this).attr("data-time"))
+//         $(this).addClass("present");
+// }
 
 
 function storeInput () {
