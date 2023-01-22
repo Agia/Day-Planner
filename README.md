@@ -26,9 +26,8 @@ Each of the following libraries / frameworks were used in this project to some d
 
 For functionality:
 
-<!-- TODO: DOUBLE CHECK LINKS -->
 - [Moment.js](https://momentjs.com)
-- [jQuery](https://jquery.com) and [jQueryUI](https://jqueryui.com)
+- [jQuery](https://jquery.com)
 
 For user experience and design:
 
