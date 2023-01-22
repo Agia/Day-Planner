@@ -1,3 +1,4 @@
+/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700&display=swap');
 
 @font-face {
@@ -5,6 +6,7 @@
     src: url("../fonts/aqua.ttf");
 }
 
+/* VARIABLES */
 :root {
   --light: #ECE2D0;
   --mid: #CEBEBE;
@@ -17,6 +19,7 @@
   --mono: "Roboto Mono";
 }
 
+/* Global settings, unless overridden */
 body {
   font-family: var(--mono);
   font-size: 1.1rem;
@@ -25,6 +28,7 @@ body {
   color: var(--dark);
 }
 
+/* Hero */
 .jumbotron {
   text-align: center;
   background-color: var(--light);
@@ -63,7 +67,7 @@ h1 {
   border: var(--dark) solid 7px;
 }
 
-/* Text in hero area */
+/* Paragraph text in hero area */
 .lead {
     color: var(--dark);
     font-size: 1.4rem;
@@ -84,15 +88,17 @@ h1 {
   padding: 20px 15px 50px;
 }
 
-#legend > p {
-  min-width: 80vw;
-  text-align: center;
-  font-size: 1rem;
-}
 
 /* Legend */
 #badges {
   text-align: center;
+}
+
+/* Legend text */
+#legend > p {
+  min-width: 80vw;
+  text-align: center;
+  font-size: 1rem;
 }
 
 /* Past, present and future legend keys */
@@ -152,10 +158,27 @@ input {
   padding-left: 20px;
   height: 75px;
   font-family: var(--mono);
+  font-size: 1.1rem;
   border: var(--dark) solid 3px;
   margin: 0px 3px 0 0;
 }
 
 .far {
     font-size: 2rem;
+}
+
+.button-del {
+  border: var(--dark) solid 3px;
+  position: relative;
+  margin: 10px auto;
+  background-color: var(--hl-dark);
+  color: var(--light);
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.button-del  i {
+  color: var(--hl-red);
+  padding-left: 10px;
 }

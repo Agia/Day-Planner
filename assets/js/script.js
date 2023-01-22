@@ -11,6 +11,7 @@ let currentHour = moment().hour();
 // Global variable for use across functions / listeners
 let input;
 let time;
+let eventInput = $(".event-input");
 
 
 // * EVENT LISTENERS * //
@@ -25,7 +26,12 @@ $(".button-save").on("click", function () {
     storeInput();
 })
 
-// TODO: Add a remove function - if time
+// Event listener to delete all saved events on click of delete button element
+$(".button-del").on("click", function () {
+    removeEvents();
+})
+
+// * FUNCTIONS
 
 // For each input field, call the following function
 $(".event-input").each(function () {
@@ -59,3 +65,17 @@ function storeInput () {
     localStorage.setItem(time, input);
 }
 
+function removeEvents () {
+    localStorage.clear();
+
+    $(eventInput).map(function () {
+        $(this).val("");
+    })
+
+    // $(".event-input").each(function () {
+
+    //     let eventDisplay = $(this).val();
+    //     eventInput.val("");
+        
+    // })
+}
