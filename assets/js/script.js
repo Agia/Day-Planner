@@ -10,7 +10,7 @@ let currentHour = moment().hour();
 let input;
 let time;
 // Stores the user input element
-let eventInput = $(".event-input");
+// let eventInput = $(".event-input");
 
 
 // * EVENT LISTENERS * //
@@ -18,8 +18,8 @@ let eventInput = $(".event-input");
 // Listen for click on .button-save elements
 $(".button-save").on("click", function () {
     // Set variables, relative to the particular button that was clicked. input to the value of it's .event-input sibling and time to the data-time attribute of same sibling
-    input = $(this).siblings(eventInput).val();
-    time = $(this).siblings(eventInput).attr("data-time");
+    input = $(this).siblings(".event-input").val();
+    time = $(this).siblings(".event-input").attr("data-time");
 
     // Call function to store time / input variables in localStorage
     storeInput();
@@ -34,7 +34,7 @@ $(".button-del").on("click", function () {
 // * FUNCTIONS * //
 
 // For each input field, call the following function
-$(eventInput).each(function () {
+$(".event-input").each(function () {
 
     // Assign to the value of it's own data-time attribute
     let timeIndex = $(this).attr("data-time");
@@ -69,7 +69,7 @@ function storeInput () {
 function removeEvents () {
     localStorage.clear();
 
-    $(eventInput).map(function () {
+    $(".event-input").map(function () {
         $(this).val("");
     })
 }
