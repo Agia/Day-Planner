@@ -1,53 +1,60 @@
-// Get the current day / date and render it to the target element
 // Variable to store current day / date for hero element
 let currentDate = moment().format("dddd, MMMM Do YYYY");
 // Application of above to relevant HTML element
 $("#currentDay").text(currentDate);
-// Variable to keep track of current hour
 
-// TODO: Change currentHour to string
+// Variable to keep track of current hour
 let currentHour = moment().hour();
+// * FOR TESTING *
+// let currentHour = 11;
+
 // Global variable for use across functions / listeners
 let input;
 let time;
 
+
 // * EVENT LISTENERS * //
+
+// Listen for click on .button-save elements
 $(".button-save").on("click", function () {
+    // Set variables, relative to the particular button that was clicked. input to the value of it's .event-input sibling and time to the data-time attribute of same sibling
     input = $(this).siblings(".event-input").val();
     time = $(this).siblings(".event-input").attr("data-time");
+
+    // Call function to store time / input variables in localStorage
     storeInput();
 })
 
 // TODO: Add a remove function - if time
 
-
+// For each input field, call the following function
 $(".event-input").each(function () {
 
+    // Assign to the value of it's own data-time attribute
     let timeIndex = $(this).attr("data-time");
+    // Assign to the value of timeIndex key from localStorage
     let event = localStorage.getItem(timeIndex);
 
+    // If value is localStorage is not empty, assign it to this input's value.
     if (event !== null) {
         $(this).val(event);
     }
 
-    // TODO: Add other removeClass
-
+    // Checks if currentHour against timeIndex value and assign/remove .past, .present and .future classes accordingly
     if (currentHour == timeIndex) {
-        $(this).addClass("present");
         $(this).removeClass("past future");
+        $(this).addClass("present");
     } else if (currentHour > timeIndex) {
+        $(this).removeClass("present future");
         $(this).addClass("past");
     } else {
+        $(this).removeClass("past present");
         $(this).addClass("future");
     }
 })
 
-// function hourComparison () {
-//     if (currentHour === $(this).attr("data-time"))
-//         $(this).addClass("present");
-// }
-
-
+// * Might prove unnecessary. Can remove and put code in appropriate eventListener
+// Helper function to save input and time data to localStorage
 function storeInput () {
     localStorage.setItem(time, input);
 }

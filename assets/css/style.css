@@ -90,6 +90,7 @@ h1 {
   font-size: 1rem;
 }
 
+/* TODO: Trial with outline */
 #badges {
   text-align: center;
 }
@@ -101,12 +102,26 @@ h1 {
   font-size: 1.1rem;
 }
 
+/* TODO: Hover effect */
 .button-save {
   color: var(--light);
   width: 10%;
   text-transform: uppercase;
   border: var(--dark) solid 3px;
   background-color: var(--hl-blue);
+  /* box-shadow: 3px 3px black; */
+}
+
+/* Hover effect on hover for save button */
+.button-save:hover {
+  box-shadow: 3px 3px black;
+}
+
+/* Add a feedback (depress) effect on click */
+.button-save:active {
+  vertical-align: top;
+  padding: 10px 5px 5px 10px;
+  box-shadow: none;
 }
 
 .hour-row {
