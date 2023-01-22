@@ -9,7 +9,7 @@ let currentHour = moment().hour();
 // Global variable for use across functions / listeners
 let input;
 let time;
-// Stores the user input element
+// Stores the user input element || (caused scoping issues on live, refactor in future)
 // let eventInput = $(".event-input");
 
 

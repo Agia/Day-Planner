@@ -17,7 +17,6 @@ You can use the app directly via it's Github Pages deployment (found [**here**](
 
 Below is a gif showing the app in use:
 
-<!-- TODO: Upload screenshot -->
 ![Gif screenshot showing the scheduler in use.](assets/img/screenshot.gif)
 
 ## Credits
@@ -31,8 +30,8 @@ For functionality:
 
 For user experience and design:
 
-- [Bootstrap](https://getbootstrap.com)
-- [Google Fonts](https://fonts.google.com).
+- A touch of [Bootstrap](https://getbootstrap.com)
+- Aqua Grotesque (the stunning title font) by Laura Pol.
 
 For reference:
 
