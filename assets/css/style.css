@@ -131,6 +131,41 @@ h1 {
   box-shadow: none;
 }
 
+.far {
+  font-size: 2rem;
+}
+
+.button-del {
+border: var(--dark) solid 3px;
+position: relative;
+margin: 10px auto;
+background-color: var(--hl-dark);
+color: var(--light);
+padding: 20px;
+font-size: 1.2rem;
+font-weight: 700;
+}
+
+.button-del  i {
+color: var(--hl-red);
+padding-left: 10px;
+}
+
+/* Effect on hover for del button */
+.button-del:hover {
+box-shadow: 4px 4px var(--hl-red);
+color: var(--light);
+}
+
+/* Adds a feedback (depress) effect on click */
+/* ? Future tweak: Adjust positioning of text on 'click' effect */
+.button-del:active {
+vertical-align: top;
+padding: 30px 10px 10px 30px;
+box-shadow: none;
+color: var(--light);
+}
+
 .hour-row {
     margin: 7px 0px;
 }
@@ -161,24 +196,4 @@ input {
   font-size: 1.1rem;
   border: var(--dark) solid 3px;
   margin: 0px 3px 0 0;
-}
-
-.far {
-    font-size: 2rem;
-}
-
-.button-del {
-  border: var(--dark) solid 3px;
-  position: relative;
-  margin: 10px auto;
-  background-color: var(--hl-dark);
-  color: var(--light);
-  padding: 20px;
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-.button-del  i {
-  color: var(--hl-red);
-  padding-left: 10px;
 }
