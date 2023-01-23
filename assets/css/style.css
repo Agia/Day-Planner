@@ -197,3 +197,7 @@ input {
   border: var(--dark) solid 3px;
   margin: 0px 3px 0 0;
 }
+
+.event-input::placeholder {
+  opacity: 0.35;
+}
